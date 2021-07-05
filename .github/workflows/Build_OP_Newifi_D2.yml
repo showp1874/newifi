@@ -8,11 +8,14 @@ name: Build Newifi 3
 on: 
   release:
     types: [published]
+
   push:
     branches: 
       - master
-  schedule:
-    - cron: 0 20 * * *
+
+  #schedule:
+  #  - cron: 0 20 * * *
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -52,7 +55,6 @@ jobs:
     - name: Clone source code
       run: |
         git clone https://github.com/coolsnowwolf/lede lede
-        echo '开启魔法上网'
         cd lede
         sed -i 's/#src-git/src-git/g' feeds.conf.default
 
@@ -64,7 +66,7 @@ jobs:
 
     - name: Load custom configuration
       run: |
-        cp -f newifi3.config ./lede/.config
+        cp -f newifi_d2.config ./lede/.config
         chmod +x diy.sh
         cd lede
         ../diy.sh
@@ -85,5 +87,5 @@ jobs:
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: Newifi 3
+        name: OpenWrt
         path: ./lede/bin

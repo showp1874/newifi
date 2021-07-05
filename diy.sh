@@ -1,19 +1,5 @@
-echo '修改机器名称'
-###
- # @Descripttion: 
- # @version: 
- # @Author: Cath
- # @Date: 2021-01-01 10:56:41
- # @LastEditors: Cath
- # @LastEditTime: 2021-01-01 10:57:14
-### 
-sed -i 's/OpenWrt/newifi3/g' package/base-files/files/bin/config_generate
-
 echo '修改网关地址'
 sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-
-echo '修改时区'
-sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 echo '修改默认主题'
 sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/luci-static\/argon\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
@@ -26,23 +12,6 @@ rm -rf ./package/lean/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../diy/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config ../diy/luci-app-argon-config
 #ln -s ../../../luci-theme-argon ./package/lean/
-
-echo '修改wifi名称'
-sed -i 's/OpenWrt/newifi3/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-
-echo '修改banner'
-rm -rf package/base-files/files/etc/banner
-cp -f ../banner package/base-files/files/etc/
-
-echo '下载ServerChan'
-git clone https://github.com/tty228/luci-app-serverchan ../diy/luci-app-serverchan
-
-echo 'JD script'
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus ../diy/luci-app-jd-dailybonus
-
-echo '下载AdGuard Home'
-svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome ../diy/luci-app-adguardhome 
-svn co https://github.com/kenzok8/openwrt-packages/trunk/AdGuardHome ../diy/AdGuardHome
 
 echo '集成diy目录'
 ln -s ../../diy ./package/openwrt-packages
