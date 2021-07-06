@@ -15,9 +15,9 @@
 * [luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 
 # 特别感谢
-> https://github.com/P3TERX/Actions-OpenWrt/
-> https://github.com/KFERMercer/OpenWrt-CI
-> https://github.com/esirplayground/AutoBuild-OpenWrt
-> https://github.com/ljk4160/GDOCK
-> https://github.com/Cathgao/newifi3
+* >https://github.com/P3TERX/Actions-OpenWrt/
+* >https://github.com/KFERMercer/OpenWrt-CI
+* >https://github.com/esirplayground/AutoBuild-OpenWrt
+* >https://github.com/ljk4160/GDOCK
+* >https://github.com/Cathgao/newifi3
 
