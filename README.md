@@ -2,7 +2,7 @@
 
 1. 目前只支持手上有的路由器D2、Y1
 2. 内置主题Argon、opentopd
-3. 默认网关IP`192.168.5.1`，密码默认`password`
+3. 默认网关IP<kbd>192.168.5.1</kbd>，密码默认<kbd>password</kbd>
 
 ## 编译状态
 
@@ -15,9 +15,9 @@
 * [luci-theme-argon](https://github.com/jerrykuku/luci-theme-argon)
 
 # 特别感谢
-* >https://github.com/P3TERX/Actions-OpenWrt/
-* >https://github.com/KFERMercer/OpenWrt-CI
-* >https://github.com/esirplayground/AutoBuild-OpenWrt
-* >https://github.com/ljk4160/GDOCK
-* >https://github.com/Cathgao/newifi3
+* > https://github.com/P3TERX/Actions-OpenWrt/
+* > https://github.com/KFERMercer/OpenWrt-CI
+* > https://github.com/esirplayground/AutoBuild-OpenWrt
+* > https://github.com/ljk4160/GDOCK
+* > https://github.com/Cathgao/newifi3
 
