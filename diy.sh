@@ -13,6 +13,7 @@ git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../di
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config ../diy/luci-app-argon-config
 #ln -s ../../../luci-theme-argon ./package/lean/
 git clone --depth=1 https://github.com/sirpdboy/luci-theme-opentopd ../diy/luci-theme-opentopd
+git clone --depth=1 https://hub.fastgit.org/tano-systems/luci-theme-tano ../diy/luci-theme-tano
 
 echo '集成diy目录'
 ln -s ../../diy ./package/openwrt-packages
