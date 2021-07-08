@@ -67,9 +67,9 @@ jobs:
     - name: Load custom configuration
       run: |
         cp -f newifi_d2.config ./lede/.config
-        chmod +x diy.sh
+        chmod +x custom.sh
         cd lede
-        ../diy.sh
+        ../custom.sh
         make defconfig
 
     - name: Download package

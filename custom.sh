@@ -9,13 +9,13 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 
 echo '删除旧版argon,链接新版'
 rm -rf ./package/lean/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../diy/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config ../diy/luci-app-argon-config
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon ../custom/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config ../custom/luci-app-argon-config
 #ln -s ../../../luci-theme-argon ./package/lean/
-git clone --depth=1 https://github.com/sirpdboy/luci-theme-opentopd ../diy/luci-theme-opentopd
+git clone --depth=1 https://github.com/sirpdboy/luci-theme-opentopd ../custom/luci-theme-opentopd
 
 echo '集成diy目录'
-ln -s ../../diy ./package/openwrt-packages
+ln -s ../../custom ./package/openwrt-packages
 
 #echo '首页增加CPU频率动态显示'
 #cp -f ../diy/mod-index.htm ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
