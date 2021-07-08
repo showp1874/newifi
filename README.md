@@ -1,6 +1,6 @@
 # For NEWIFi
 
-1. 目前只支持手上有的路由器D2、Y1
+1. 自动编译路由器D2、Y1
 2. 内置主题Argon、opentopd
 3. 默认网关IP<kbd>192.168.5.1</kbd>，密码默认<kbd>password</kbd>
 
